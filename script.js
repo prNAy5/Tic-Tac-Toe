@@ -1,7 +1,7 @@
 let box1=document.querySelectorAll(".box")
 let reset=document.querySelector(".reset")
 let body=document.querySelector("body")
-
+let s=document.getElementById("win")
 
 player0=true
 contest1=[
@@ -24,12 +24,11 @@ pranayfuc=()=>{
             if (pranay[contest1[i][0]]=="o"){
                 // Background1="player O Won"
                 
-                s=document.getElementById("win")
                 s.innerText="player o Won";
             }
             else if (pranay[contest1[i][0]]=="X"){
                 // Background1="player X Won"
-                s=document.getElementById("win")
+                
                 s.innerText="player X Won";
             }
         }       
@@ -41,17 +40,17 @@ pranayfuc=()=>{
 box1.forEach((box)=>{
     box.addEventListener("click",()=>{
         if (player0==true){
-            box.innerText="X"
+            box.innerText="X";
             player0=false;
-            box.disabled=true
-            pranay[box.id]="X"
+            box.disabled=true;
+            pranay[box.id]="X";
             pranayfuc();
         }
         else{
-            box.innerText="o"
-            box.disabled=true
-            player0=true
-            pranay[box.id]="o"
+            box.innerText="o";
+            box.disabled=true;
+            player0=true;
+            pranay[box.id]="o";
             pranayfuc();
         }
     })
@@ -62,7 +61,7 @@ reset.addEventListener(("click"),()=>{
     pranay=[]
     box1.forEach((box)=>{
         box.disabled=false;
-        box.innerText=""
+        box.innerText=" ";
         s.innerText="";
 
 
@@ -70,6 +69,7 @@ reset.addEventListener(("click"),()=>{
 
 }
 )
+
 
 
 console.log(pranay)
