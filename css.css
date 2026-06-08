@@ -38,10 +38,12 @@ body{
     height: 18vmin;
     width: 18vmin;
     border-radius: 10%;
-    justify-content: center;
     color: brown;
     font-size:2vmin;
     box-shadow: 0 0 1rem rgba(0,0,0,0.1)
+    display: flax;
+    justify-content: center;
+    align-items: center;
 
 }
 .box:disabled{
